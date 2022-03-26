@@ -1,0 +1,15 @@
+<div class="bar1"></div>
+<nav class="navbar">
+    <div class="set_width">
+        <a href="{% url 'index' %}" id='logo' class="logo">Crônicas do Ancião Pufzilla</a>
+        <button class="menu_toggler">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="navbar_menu">
+            <a href="{% url 'category' 'jornal' %}">Jornal</a>
+            <a href="{% url 'category' 'cronicas_medievais' %}">Crônicas Medievais</a>
+        </div>
+    </div>
+</nav>

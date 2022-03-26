@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<head>
+    {% include 'partials/_head.html' %}
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+    {% include 'partials/_nav.html' %}
+    <section id="home">
+        <div class="set_width">
+            <div class="square">
+                <section class="posts">
+                    {% block content %}{% endblock %}
+                </section>
+            </div>
+            {% include 'partials/_pagination.html' %}
+        </div>
+    </section>
+    {% block footer %}{% endblock %}
+</body>
+</html>

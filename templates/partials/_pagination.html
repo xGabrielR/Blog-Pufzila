@@ -1,0 +1,35 @@
+{% if is_paginated %}
+<section id="pagination">
+    <ul class="pagination">
+        {% if page_obj.has_previous %}
+        <li>
+            <a href="?page=1">&laquo;</a>
+        </li>
+        <li>
+            <a href="?page={{ page_obj.previous_page_number }}">&lsaquo;</a>
+        </li>
+        {% endif %}
+
+        {% for n in page_obj.paginator.page_range %}
+        {% if page_obj.number == n %}
+        <li">
+            <a href="?page={{ n }}">{{ n }}</a>
+        </li>
+        {% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3' %}
+        <li>
+            <a href="?page={{ n }}">{{ n }}</a>
+        </li>
+        {% endif %}
+        {% endfor %}
+
+        {% if page_obj.has_next %}
+        <li>
+            <a href="?page={{ page_obj.next_page_number }}">&rsaquo;</a>
+        </li>
+        <li>
+            <a href="?page={{ page_obj.paginator.num_pages }}">&raquo;</a>
+        </li>
+        {% endif %}
+    </ul>
+</section>
+{% endif %}
