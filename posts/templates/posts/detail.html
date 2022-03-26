@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% block title %}Detalhes do Post ⚔️{% endblock %}
+{% block content %}
+
+<section id="home">
+    <div class="set_width">
+        <div class="square2">
+            <div class="post_header">
+                <h2>{{ post.title }}</h2>
+                <span class="date">{{ post.created }}</span>
+                <div class="cube"></div>
+            </div>
+            {% if post.image %}
+            <div class="img_detail">
+                <img class='auto_img' src="{{ post.image.url }}" alt="{[ post.title }]}" srcset="">
+            </div>
+            {% endif %}
+            <div class="bar"></div>
+            <div class="post_body">
+                {{ post.body|safe }}
+            </div>
+            <p class="final">{{ post.author|title }} | {{ post.category }}</p>
+            <div class="bar"></div>
+            <div class="comments">
+                <div class="set_width">
+                    {% if comments %}
+                    <div class="comments_list">
+                        <h2 class="h2_comments">Comentários | {{ comments.count}} |</h2>
+                        {% for c in comments %}
+                        <div class="unique_comments">
+                            <h5>{{ c.name }}</h5>
+                            <hr>
+                            <small>{{ c.date }}</small>
+                            <p>{{ c.text }}</p>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+                </div>
+                <div class="set_width">
+                    <div class="leave_comment">
+                        <h2 class="h2_comments">Deixe um Comentário</h2>
+                        <form method="POST" action="#send_comment_from">
+                            <!--Token-->
+                            {% csrf_token %}
+                            <table class="table">
+                               {{ form }}
+                                <tr>
+                                    <td colspan="2">
+                                        <input class="send_comment_button" id="send_comment" type="submit" class="btn btn-primary" value="Enviar">
+                                    </td>
+                                </tr>
+                            </table>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

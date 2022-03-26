@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block title %}Lista de Categorias ⚔️{% endblock %}
+{% block content%}
+{% for p in posts %}
+    <div class="post">
+        {% if p.image %}
+        <a href="{% url 'detail' p.slug %}" target='_blank'><img src="{{ p.image.url }}" alt="{{ p.title }}"></a>
+        {% endif %}
+        <div class="post_content">
+            <a href="{% url 'detail' p.slug %}" target="_blank"><h3>{{ p.title }}</h3></a>
+            <span class="date">{{ p.created }} | {{ p.comment_set.count }} Comentário(s)</span>
+        </div>
+    </div>
+{% endfor %}
+{% endblock %}
+{% block footer %}
+<footer id="foot">
+    <div class="set_width">
+        <div class="content_foot">
+            <p>Blogzin do Pufzilla</p>
+            <p>Pufzilla Produções</p>
+        </div>
+    </div>
+</footer>
+{% endblock %}
