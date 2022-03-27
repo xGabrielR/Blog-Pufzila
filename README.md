@@ -1,4 +1,4 @@
-# Blog Pufzila
+# Blog Pufzilla
 
 ![k](https://user-images.githubusercontent.com/75986085/160256693-c223bc29-2f70-4d67-acab-46be07e2624e.png)
 
