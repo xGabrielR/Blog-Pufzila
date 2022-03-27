@@ -28,7 +28,7 @@
     <dt>Django Admin.</dt>
       <dd>Simple publish boolean field to check if posts is published or comment is published.</dd>
     <dt>Deployment.</dt>
-      <dd>I deploy at Heroku, you can acess with this link to read Pufzila's projects: <a href='#'>Blog do Pufzilla</a>.</dd>
+      <dd>I deploy at Heroku, you can acess with this link to read Pufzila's projects: <a href='https://pufzilla-blog.onrender.com/'>Pufzilla's Chronicles</a>.</dd>
   </dl>
 </ul>
 
