@@ -4,7 +4,7 @@
 
 <h2>0. Bussiness Problem</h2>
 <hr>
-<p>First, I met the Pufzila on a Discord server of a game, is a Arts Teacher / Geral teacher and story writer (chronicles, medieval stories), but he doesn't have a website or a blog to show his work in a 'more professional way', he only send the history on Instagram and Discord.</p>
+<p>First, I met the Pufzilla on a Discord server of a game, is a Arts Teacher / Geral teacher and story writer (chronicles, medieval stories), but he doesn't have a website or a blog to show his work in a 'more professional way', he only send the history on Instagram and Discord.</p>
 <p>Knowing this, how can I encourage you to develop better and more complete projects and chronicles?</p>
 
 > *How will Pufzila be able to register their projects on a more interesting platform and share them with the world ?*
